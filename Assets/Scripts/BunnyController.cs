@@ -10,6 +10,12 @@ public class BunnyController : MonoBehaviour
     private Projectile birdo;
     GameObject door;
     GameObject key;
+    // Start is called before the first frame update
+    void Start()
+    {
+        key = GameObject.FindGameObjectWithTag("Key");
+        door = GameObject.FindGameObjectWithTag("Door");
+    }
 
     void Update()
     {
