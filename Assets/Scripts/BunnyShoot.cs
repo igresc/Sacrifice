@@ -50,7 +50,7 @@ public class BunnyShoot : MonoBehaviour
 
 		if(Input.GetButtonDown("Fire2") && projectile)
 		{
-			projectile.Destroy();
+			projectile.Die();
 		}
 	}
 	public Vector3 PlotTrajectoryAtTime(Vector3 start, Vector3 startVelocity, float time)

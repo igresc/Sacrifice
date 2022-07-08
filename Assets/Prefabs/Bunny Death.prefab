@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4523741211448577103}
   - component: {fileID: 7607230870875332909}
   - component: {fileID: 1502117188792132415}
-  - component: {fileID: 1288391422}
+  - component: {fileID: 4461576748224900186}
   m_Layer: 0
   m_Name: Death_8
   m_TagString: Untagged
@@ -107,8 +107,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1288391422
-BoxCollider2D:
+--- !u!60 &4461576748224900186
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -130,9 +130,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.28125, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.140625, y: 0.125}
+      - {x: -0.140625, y: -0.125}
+      - {x: 0.140625, y: -0.125}
+      - {x: 0.140625, y: 0.125}
 --- !u!1 &1377711422459279354
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +147,7 @@ GameObject:
   - component: {fileID: 1340652529283252840}
   - component: {fileID: 2898288210794572319}
   - component: {fileID: 6404626572918652825}
-  - component: {fileID: 227286123}
+  - component: {fileID: 2735126394361255962}
   m_Layer: 0
   m_Name: Death_10
   m_TagString: Untagged
@@ -240,8 +243,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &227286123
-BoxCollider2D:
+--- !u!60 &2735126394361255962
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -263,9 +266,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.09375, y: 0.125}
+      - {x: -0.125, y: 0.09375}
+      - {x: -0.125, y: -0.0625}
+      - {x: -0.03125, y: -0.125}
+      - {x: 0.125, y: -0.125}
+      - {x: 0.125, y: 0.125}
 --- !u!1 &1612007260538608403
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +285,7 @@ GameObject:
   - component: {fileID: 9165083388760157227}
   - component: {fileID: 7336402034952414445}
   - component: {fileID: 2185499634486493955}
-  - component: {fileID: 1097492490}
+  - component: {fileID: 710263228954998733}
   m_Layer: 0
   m_Name: Death_12
   m_TagString: Untagged
@@ -373,8 +381,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1097492490
-BoxCollider2D:
+--- !u!60 &710263228954998733
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -396,9 +404,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.125, y: 0.125}
+      - {x: -0.125, y: -0.125}
+      - {x: 0.125, y: -0.125}
+      - {x: 0.125, y: 0.125}
 --- !u!1 &2166127105395836205
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +421,7 @@ GameObject:
   - component: {fileID: 7259970111187725762}
   - component: {fileID: 480080769733059775}
   - component: {fileID: 9191043491519214933}
-  - component: {fileID: 321887482}
+  - component: {fileID: 8762496396267552601}
   m_Layer: 0
   m_Name: Death_16
   m_TagString: Untagged
@@ -506,8 +517,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &321887482
-BoxCollider2D:
+--- !u!60 &8762496396267552601
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -529,9 +540,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.125, y: 0.125}
+      - {x: -0.125, y: -0.0625}
+      - {x: -0.0625, y: -0.125}
+      - {x: 0.125, y: -0.125}
+      - {x: 0.125, y: 0.125}
 --- !u!1 &3566835633413501456
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +558,7 @@ GameObject:
   - component: {fileID: 4854988205763819176}
   - component: {fileID: 3450486902598103504}
   - component: {fileID: 3697188876331502406}
-  - component: {fileID: 1069923218}
+  - component: {fileID: 816947946477204573}
   m_Layer: 0
   m_Name: Death_17
   m_TagString: Untagged
@@ -639,8 +654,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1069923218
-BoxCollider2D:
+--- !u!60 &816947946477204573
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -662,9 +677,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.125, y: 0.125}
+      - {x: -0.125, y: -0.125}
+      - {x: 0.03125, y: -0.125}
+      - {x: 0.03125, y: 0.0625}
+      - {x: 0, y: 0.125}
 --- !u!1 &4309771151727999859
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +695,7 @@ GameObject:
   - component: {fileID: 1666622231945418332}
   - component: {fileID: 4431415302635723458}
   - component: {fileID: 3074768697131557929}
-  - component: {fileID: 128111673}
+  - component: {fileID: 3968566697313755238}
   m_Layer: 0
   m_Name: Death_11
   m_TagString: Untagged
@@ -772,8 +791,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &128111673
-BoxCollider2D:
+--- !u!60 &3968566697313755238
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -795,9 +814,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.125, y: 0.125}
+      - {x: -0.125, y: -0.125}
+      - {x: 0.125, y: -0.125}
+      - {x: 0.125, y: 0.125}
 --- !u!1 &4782908499120800439
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +831,7 @@ GameObject:
   - component: {fileID: 1220523218793393602}
   - component: {fileID: 6954749653756547627}
   - component: {fileID: 4923746023040251998}
-  - component: {fileID: 1340155330}
+  - component: {fileID: 7937422081530107395}
   m_Layer: 0
   m_Name: Death_5
   m_TagString: Untagged
@@ -905,8 +927,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1340155330
-BoxCollider2D:
+--- !u!60 &7937422081530107395
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -928,9 +950,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.125, y: 0.125}
+      - {x: -0.125, y: -0.125}
+      - {x: -0.03125, y: -0.125}
+      - {x: 0.0625, y: -0.09375}
+      - {x: 0.125, y: 0}
+      - {x: 0.125, y: 0.125}
 --- !u!1 &6108415964447527195
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +969,7 @@ GameObject:
   - component: {fileID: 1733781590310488114}
   - component: {fileID: 6860131252888086387}
   - component: {fileID: 5589210951609752615}
-  - component: {fileID: 1029667370}
+  - component: {fileID: 4654420368807560845}
   m_Layer: 0
   m_Name: Death_15
   m_TagString: Untagged
@@ -1038,8 +1065,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1029667370
-BoxCollider2D:
+--- !u!60 &4654420368807560845
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1061,9 +1088,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.28125}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.125, y: 0.140625}
+      - {x: -0.125, y: -0.140625}
+      - {x: 0.0625, y: -0.140625}
+      - {x: 0.125, y: -0.109375}
+      - {x: 0.125, y: 0.140625}
 --- !u!1 &7598605432161128375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1106,7 @@ GameObject:
   - component: {fileID: 3412441036308636378}
   - component: {fileID: 2195773497278086355}
   - component: {fileID: 4953155759283547156}
-  - component: {fileID: 1019665480}
+  - component: {fileID: 2068683701779706009}
   m_Layer: 0
   m_Name: Death_14
   m_TagString: Untagged
@@ -1171,8 +1202,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1019665480
-BoxCollider2D:
+--- !u!60 &2068683701779706009
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1194,9 +1225,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.3125}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.03125, y: 0.15625}
+      - {x: -0.03125, y: 0.09375}
+      - {x: -0.03125, y: -0.15625}
+      - {x: 0.125, y: -0.15625}
+      - {x: 0.125, y: 0.15625}
 --- !u!1 &7850848805157641922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,7 +1305,7 @@ GameObject:
   - component: {fileID: 7850848805423461730}
   - component: {fileID: 7850848805423461740}
   - component: {fileID: 7850848805423461741}
-  - component: {fileID: 729844218}
+  - component: {fileID: 1657839304970824448}
   m_Layer: 0
   m_Name: Death_1
   m_TagString: Untagged
@@ -1366,8 +1401,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &729844218
-BoxCollider2D:
+--- !u!60 &1657839304970824448
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1389,9 +1424,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.28125, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.109375, y: 0.125}
+      - {x: -0.140625, y: 0.09375}
+      - {x: -0.140625, y: -0.125}
+      - {x: 0.140625, y: -0.125}
+      - {x: 0.140625, y: 0.09375}
+      - {x: 0.109375, y: 0.125}
 --- !u!1 &7850848805678643636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,7 +1443,7 @@ GameObject:
   - component: {fileID: 7850848805678643639}
   - component: {fileID: 7850848805678643633}
   - component: {fileID: 7850848805678643638}
-  - component: {fileID: 349586725}
+  - component: {fileID: 316718266296988018}
   m_Layer: 0
   m_Name: Death_3
   m_TagString: Untagged
@@ -1499,8 +1539,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &349586725
-BoxCollider2D:
+--- !u!60 &316718266296988018
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1522,9 +1562,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.03125, y: 0.125}
+      - {x: -0.125, y: -0.03125}
+      - {x: -0.125, y: -0.125}
+      - {x: 0.125, y: -0.125}
+      - {x: 0.125, y: 0.125}
 --- !u!1 &7850848805938159288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1580,7 @@ GameObject:
   - component: {fileID: 7850848805938159291}
   - component: {fileID: 7850848805938159269}
   - component: {fileID: 7850848805938159290}
-  - component: {fileID: 70148657}
+  - component: {fileID: 3528144538336177956}
   m_Layer: 0
   m_Name: Death_4
   m_TagString: Untagged
@@ -1632,8 +1676,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &70148657
-BoxCollider2D:
+--- !u!60 &3528144538336177956
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1655,9 +1699,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.125, y: 0.125}
+      - {x: -0.125, y: -0.125}
+      - {x: 0.125, y: -0.125}
+      - {x: 0.125, y: 0.125}
 --- !u!1 &7850848806736502678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,7 +1716,7 @@ GameObject:
   - component: {fileID: 7850848806736502673}
   - component: {fileID: 7850848806736502675}
   - component: {fileID: 7850848806736502672}
-  - component: {fileID: 1438917383}
+  - component: {fileID: 1670119392423035754}
   m_Layer: 0
   m_Name: Death_2
   m_TagString: Untagged
@@ -1765,8 +1812,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1438917383
-BoxCollider2D:
+--- !u!60 &1670119392423035754
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1788,9 +1835,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.09375, y: 0.0625}
+      - {x: -0.125, y: 0.03125}
+      - {x: -0.125, y: -0.125}
+      - {x: 0.125, y: -0.125}
+      - {x: 0.125, y: -0.03125}
+      - {x: 0.03125, y: 0.0625}
 --- !u!1 &8832895131843466593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,7 +1854,7 @@ GameObject:
   - component: {fileID: 4484579742501613202}
   - component: {fileID: 2993188650223082741}
   - component: {fileID: 6902392377146986526}
-  - component: {fileID: 1593000263}
+  - component: {fileID: 3630715601435117565}
   m_Layer: 0
   m_Name: Death_7
   m_TagString: Untagged
@@ -1898,8 +1950,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1593000263
-BoxCollider2D:
+--- !u!60 &3630715601435117565
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1921,9 +1973,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.28125, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.140625, y: 0.125}
+      - {x: -0.140625, y: -0.125}
+      - {x: 0.140625, y: -0.125}
+      - {x: 0.140625, y: 0.125}
 --- !u!1 &9147528361729110635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,7 +1990,7 @@ GameObject:
   - component: {fileID: 8135622215282951176}
   - component: {fileID: 165265010058913390}
   - component: {fileID: 7367246326687262859}
-  - component: {fileID: 785250679}
+  - component: {fileID: 7794659812949113854}
   m_Layer: 0
   m_Name: Death_13
   m_TagString: Untagged
@@ -2031,8 +2086,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &785250679
-BoxCollider2D:
+--- !u!60 &7794659812949113854
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2054,6 +2109,11 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.125, y: 0.125}
+      - {x: -0.125, y: -0.125}
+      - {x: -0.03125, y: -0.125}
+      - {x: 0.09375, y: 0}
+      - {x: 0.09375, y: 0.09375}
+      - {x: 0.0625, y: 0.125}

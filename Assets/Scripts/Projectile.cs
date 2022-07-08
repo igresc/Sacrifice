@@ -7,7 +7,8 @@ public class Projectile : MonoBehaviour
 	[HideInInspector] public Rigidbody2D rb;
 	[HideInInspector] public CircleCollider2D circleCollider;
 	[HideInInspector] public bool isRespawn = false;
-
+	public GameObject birdDeath;
+	
 	void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -38,9 +39,17 @@ public class Projectile : MonoBehaviour
 			isRespawn = true;
 		}
 	}
-
-	public void Destroy()
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		Destroy(gameObject);
+		if (collision.CompareTag("Enemies"))
+		{
+			Die();
+		}
+	}
+
+	public void Die()
+	{
+		Instantiate(birdDeath, transform.position, transform.rotation);
+		Destroy(this.gameObject);
 	}
 }
