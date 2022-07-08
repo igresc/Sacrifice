@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class BunnyController : MonoBehaviour
 {
@@ -13,8 +13,7 @@ public class BunnyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        key = GameObject.FindGameObjectWithTag("Key");
-        door = GameObject.FindGameObjectWithTag("Door");
+        
     }
 
     // Update is called once per frame
