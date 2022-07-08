@@ -1258,6 +1258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionStrenght: 5
   explosionTorque: 20
+  deadParticles: {fileID: 1122432097065049652, guid: 875667eca74adb94ea809f38840ecfd3, type: 3}
 --- !u!1 &7850848805423461731
 GameObject:
   m_ObjectHideFlags: 0

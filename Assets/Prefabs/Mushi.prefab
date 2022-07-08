@@ -147,3 +147,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   jumpForce: 15
+  deadParticles: {fileID: 1122432097065049652, guid: 875667eca74adb94ea809f38840ecfd3, type: 3}
+  anim: {fileID: 2416447235542326614}
