@@ -39,7 +39,7 @@ public class BunnyController : MonoBehaviour
         }
         if (collision.CompareTag("Door") && key.GetComponent<KeyLogic>().hasKey)
         {
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Mushi : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    Rigidbody2D rb;
+    GameObject bunny;
     public float jumpForce;
     [SerializeField] private ParticleSystem deadParticles;
     [SerializeField] private Animator anim;
@@ -13,7 +14,8 @@ public class Mushi : MonoBehaviour
 
     void Start()
     {
-        //rb = amaru.GetComponent<Rigidbody2D>(); 
+        bunny = GameObject.FindGameObjectWithTag("Player");
+        rb = bunny.GetComponent<Rigidbody2D>(); 
     }
 
     private void Update()
