@@ -314,7 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a08cf97aeceaa54d89f7b7319e9d04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bunny: {fileID: 4481383973565705832}
   bunnyDeath: {fileID: 7850848805157641922, guid: 7be399d7f3065d74ab2608eced75e8b0, type: 3}
+  birdo: {fileID: 0}
 --- !u!1 &6054561163323400220
 GameObject:
   m_ObjectHideFlags: 0
