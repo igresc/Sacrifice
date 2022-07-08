@@ -409,25 +409,25 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: 556
+      e00: 2.489952e+29
       e01: 0
       e02: -8.081546e-39
       e03: -8.081546e-39
-      e10: 0
+      e10: 4.591e-41
       e11: 0
-      e12: 5.1e-43
-      e13: 5.1e-43
-      e20: 1.1825734e+34
+      e12: 9.77e-43
+      e13: 9.77e-43
+      e20: -1.1262049e-28
       e21: 1e-45
-      e22: 8.982176e-29
-      e23: -3.4526898e+15
-      e30: 4.5904e-41
+      e22: 2.685808e-19
+      e23: 3.6950557e+19
+      e30: 4.5905e-41
       e31: 0
-      e32: 5.11e-43
-      e33: 5.11e-43
+      e32: 9.78e-43
+      e33: 9.81e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+    m_Data: {r: 5.5878e-41, g: 5.5878e-41, b: 5.5878e-41, a: 5.5878e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1232,6 +1232,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6323029278340161298, guid: 3b206bde17cdce24585a647a0c152bbf, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 2940779657021990972, guid: e3875be02060b564ebd19df6e7790cfa, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b206bde17cdce24585a647a0c152bbf, type: 3}
 --- !u!1 &2030120518
