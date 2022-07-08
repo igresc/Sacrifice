@@ -13,7 +13,8 @@ public class BunnyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        key = GameObject.FindGameObjectWithTag("Key");
+        door = GameObject.FindGameObjectWithTag("Door");
     }
 
     // Update is called once per frame
