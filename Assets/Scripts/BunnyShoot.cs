@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class BunnyShoot : MonoBehaviour
 {
 	public Projectile projectilePrefab;
@@ -10,9 +9,10 @@ public class BunnyShoot : MonoBehaviour
 	private bool isAiming = false;
 	private Vector2 dir;
 	private LineRenderer lineRenderer;
-
+	GameObject GM;
 	private void Awake()
 	{
+		GM = GameObject.FindGameObjectWithTag("GM");
 		lineRenderer = GetComponent<LineRenderer>();
 		lineRenderer.enabled = false;
 	}
@@ -21,28 +21,31 @@ public class BunnyShoot : MonoBehaviour
 	{
 		Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		worldPosition.z = 0;
-
-		if(Input.GetButtonDown("Fire1") && !projectile)
+		if (GM.GetComponent<GameMaster>().hasBirdos)
 		{
-			lineRenderer.enabled = true;
-			isAiming = true;
-		}
+			if (Input.GetButtonDown("Fire1") && !projectile)
+			{
+				lineRenderer.enabled = true;
+				isAiming = true;
+			}
 
-		if(isAiming)
-		{
-			dir = worldPosition - gameObject.transform.position;
-			dir = dir * 1.5f;
-			//float distance = dir.magnitude;
-			PlotTrajectory(gameObject.transform.position, dir, .1f, 1.2f);
-			lineRenderer.SetPosition(0, transform.position);
-		}
+			if (isAiming)
+			{
+				dir = worldPosition - gameObject.transform.position;
+				dir = dir * 1.5f;
+				//float distance = dir.magnitude;
+				PlotTrajectory(gameObject.transform.position, dir, .1f, 1.2f);
+				lineRenderer.SetPosition(0, transform.position);
+			}
 
-		if (Input.GetButtonUp("Fire1") && isAiming)
-		{
-			projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x, transform.position.y + 1), transform.rotation);
-			projectile.Throw(dir);
-			isAiming = false;
-			lineRenderer.enabled = false;
+			if (Input.GetButtonUp("Fire1") && isAiming)
+			{
+				projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x, transform.position.y + 1), transform.rotation);
+				projectile.Throw(dir);
+				isAiming = false;
+				lineRenderer.enabled = false;
+				GM.GetComponent<GameMaster>().numOfBirdos--;
+			}
 		}
 
 		if(Input.GetButtonDown("Fire2") && projectile)
