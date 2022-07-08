@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
+
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,16 +28,23 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if(Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             //rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             rb.velocity = Vector2.up * jumpingPower;
         }
 
-        //if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        //{
-        //    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        //}
+
+        if (horizontal == 0f && IsGrounded()) 
+        {
+            anim.SetBool("isIdle", true);
+            anim.SetBool("isRunning", false);
+        }
+        else 
+        {
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", true);
+        }
 
         Flip();
     }
