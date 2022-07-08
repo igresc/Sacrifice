@@ -17,13 +17,13 @@ public class PlayerMovement : MonoBehaviour
 	public LayerMask groundLayer;
 
 	public Animator anim;
-	// Start is called before the first frame update
-	void Start()
-	{
 
+	private void Start()
+	{
+		isFacingRight = false;
+		transform.localScale = Vector3.one;
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
 		horizontal = Input.GetAxisRaw("Horizontal");

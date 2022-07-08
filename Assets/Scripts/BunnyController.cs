@@ -10,18 +10,11 @@ public class BunnyController : MonoBehaviour
     private Projectile birdo;
     GameObject door;
     GameObject key;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
 		if(Input.GetButtonDown("Fire3"))
 		{
-            Instantiate(bunnyDeath, transform.position, transform.rotation);
             Die();
 		}
         birdo = GetComponent<BunnyShoot>().projectile;
@@ -46,9 +39,9 @@ public class BunnyController : MonoBehaviour
 
     IEnumerator RespawnBunny()
     {
-		Destroy(this.gameObject);
         Instantiate(Bunny, birdo.transform.position, Quaternion.identity);
-        //birdo.Die();
+        birdo.Die();
+		Destroy(this.gameObject);
         yield return null;
     }
 
