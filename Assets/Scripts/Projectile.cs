@@ -31,7 +31,10 @@ public class Projectile : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		DesactivateRb();
+		if(collision.gameObject.tag != "Player")
+		{
+			DesactivateRb();
+		}
 	}
 
 	public void Destroy()
