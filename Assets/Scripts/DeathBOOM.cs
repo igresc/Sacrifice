@@ -12,12 +12,11 @@ public class DeathBOOM : MonoBehaviour
 	public void Start()
 	{
 		Death();
+		Destroy(gameObject, 2.0f);
 	}
 
 	public void Death()
 	{
-		//Collider2D[] parts = GetComponentsInChildren<Collider2D>();
-
 		Rigidbody2D[] parts = GetComponentsInChildren<Rigidbody2D>();
 		foreach (Rigidbody2D part in parts)
 		{

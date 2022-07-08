@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
 	[HideInInspector] public Rigidbody2D rb;
 	[HideInInspector] public CircleCollider2D circleCollider;
+	[HideInInspector] public bool isRespawn = false;
 
 	void Awake()
 	{
@@ -34,6 +35,7 @@ public class Projectile : MonoBehaviour
 		if(collision.gameObject.tag != "Player")
 		{
 			DesactivateRb();
+			isRespawn = true;
 		}
 	}
 
