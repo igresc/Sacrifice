@@ -7,6 +7,7 @@ public class BunnyDeath : MonoBehaviour
 
     [SerializeField] private float explosionStrenght;
     [SerializeField] private float explosionTorque;
+    [SerializeField] private ParticleSystem deadParticles;
 
 	public void Start()
 	{
@@ -29,5 +30,6 @@ public class BunnyDeath : MonoBehaviour
 				part.AddForce(dir * finalForce, ForceMode2D.Impulse);
 			}
 		}
+		Instantiate(deadParticles, transform.position, Quaternion.identity);
 	}
 }
