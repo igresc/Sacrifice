@@ -463,4 +463,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 4612467981018548295}
-  numOfBirdos: 6
+  numOfBirdos: 0
