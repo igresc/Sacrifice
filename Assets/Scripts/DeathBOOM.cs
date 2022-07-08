@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BunnyDeath : MonoBehaviour
+public class DeathBOOM : MonoBehaviour
 {
 
     [SerializeField] private float explosionStrenght;

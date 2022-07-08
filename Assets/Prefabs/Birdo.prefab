@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7496870751861323296}
   - component: {fileID: 437356066624961267}
   - component: {fileID: 2568816600575014976}
+  - component: {fileID: 4388466605670025370}
   m_Layer: 0
   m_Name: Birdo
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7496870751861323308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.38499317, y: -0.1791852, z: -0.035125878}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -159,3 +160,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4388466605670025370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496870751861323308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4cb43d02266d81409b86748f3de1e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdDeath: {fileID: 9127633003266391648, guid: b1cf80503dbfc664793b6bcf62f0795b, type: 3}
