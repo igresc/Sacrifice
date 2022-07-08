@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontal;
     float speed = 8f;
     float jumpingPower = 10f;
-    bool isFacingRight = true;
+    bool isFacingRight = false;
 
     [SerializeField] public float fallMultiplier = 6f;
     [SerializeField] public float lowJumpMultiplier = 5.5f;
