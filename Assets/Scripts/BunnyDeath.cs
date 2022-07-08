@@ -6,6 +6,7 @@ public class BunnyDeath : MonoBehaviour
 {
 
     [SerializeField] private float explosionStrenght;
+    [SerializeField] private float explosionTorque;
 
 	public void Start()
 	{
@@ -17,15 +18,16 @@ public class BunnyDeath : MonoBehaviour
 		//Collider2D[] parts = GetComponentsInChildren<Collider2D>();
 
 		Rigidbody2D[] parts = GetComponentsInChildren<Rigidbody2D>();
-		Debug.Log(parts);
 		foreach (Rigidbody2D part in parts)
 		{
-			//if (part != null) {
-			//	Vector2 dir = part.transform.position - transform.position;
-			//	float distance = 1 + dir.magnitude;
-			//	float finalForce = explosionStrenght / distance;
-			//	part.AddForce(dir * finalForce);
-			//}
+			if(part != null)
+			{
+				Vector2 dir = part.transform.position - transform.position;
+				float distance = 1 + dir.magnitude;
+				float finalForce = explosionStrenght / distance;
+				part.AddTorque(-dir.x * explosionTorque, ForceMode2D.Force);
+				part.AddForce(dir * finalForce, ForceMode2D.Impulse);
+			}
 		}
 	}
 }

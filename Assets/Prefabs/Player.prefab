@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 4481383973565705834}
   - component: {fileID: 4481383973565705833}
   - component: {fileID: 3363015082071442098}
-  - component: {fileID: 6497913956414800021}
   - component: {fileID: 7117260882737670727}
   - component: {fileID: 6484213590048738652}
+  - component: {fileID: 6497913956414800021}
   - component: {fileID: 6323029278340161298}
+  - component: {fileID: 5228628588824144781}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -111,26 +112,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6497913956414800021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4481383973565705832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 308c732d0f83eb1429a1cd963ad879c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallMultiplier: 6
-  lowJumpMultiplier: 5.5
-  rb: {fileID: 3363015082071442098}
-  groundCheck: {fileID: 3738800974343220912}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  anim: {fileID: 6484213590048738652}
 --- !u!70 &7117260882737670727
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -167,6 +148,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6497913956414800021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481383973565705832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308c732d0f83eb1429a1cd963ad879c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 6
+  lowJumpMultiplier: 5.5
+  rb: {fileID: 3363015082071442098}
+  groundCheck: {fileID: 3738800974343220912}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  anim: {fileID: 6484213590048738652}
 --- !u!114 &6323029278340161298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,8 +180,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2032fc69f1ba3247b1887339b926964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 6466445847587957049, guid: e3875be02060b564ebd19df6e7790cfa, type: 3}
+  projectilePrefab: {fileID: 2940779657021990972, guid: e3875be02060b564ebd19df6e7790cfa, type: 3}
   projectile: {fileID: 6466445847587957049, guid: e3875be02060b564ebd19df6e7790cfa, type: 3}
+--- !u!114 &5228628588824144781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481383973565705832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a08cf97aeceaa54d89f7b7319e9d04f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bunnyDeath: {fileID: 7850848805157641922, guid: 7be399d7f3065d74ab2608eced75e8b0, type: 3}
 --- !u!1 &6054561163323400220
 GameObject:
   m_ObjectHideFlags: 0
