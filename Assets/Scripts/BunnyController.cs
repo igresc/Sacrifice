@@ -21,4 +21,12 @@ public class BunnyController : MonoBehaviour
 			Destroy(this.gameObject);
 		}
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemies")) 
+        {
+            Instantiate(bunnyDeath, transform.position, transform.rotation);
+            Destroy(this.gameObject);
+        }
+    }
 }
