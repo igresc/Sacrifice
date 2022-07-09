@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartMenu : MonoBehaviour
 {
-	//public GameObject restartMenuUi;
+	public GameObject restartMenuUi;
 	public GameObject Pause;
 	private void Update()
 	{
