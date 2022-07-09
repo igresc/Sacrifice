@@ -20,6 +20,7 @@ public class Mushi : MonoBehaviour
         {
             if (timeBeforeDie <= 0)
             {
+                SacrificialCounter.mushisSacrified++;
                 Death();
             }
             else 

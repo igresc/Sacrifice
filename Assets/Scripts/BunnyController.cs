@@ -61,6 +61,7 @@ public class BunnyController : MonoBehaviour
 
     void Die()
 	{
+        SacrificialCounter.bunniesSacrified++;
         Instantiate(bunnyDeath, transform.position, transform.rotation);
         if (birdo != null) 
         {

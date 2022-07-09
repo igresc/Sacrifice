@@ -50,12 +50,14 @@ public class Projectile : MonoBehaviour
 	{
 		if (collision.CompareTag("Enemies"))
 		{
+			
 			Die();
 		}
 	}
 
 	public void Die()
 	{
+		SacrificialCounter.birdosSacrified++;
 		Instantiate(birdDeath, transform.position, transform.rotation);
 		Destroy(this.gameObject);
 	}
