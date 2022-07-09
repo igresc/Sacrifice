@@ -11,14 +11,12 @@ public class BunnyController : MonoBehaviour
     GameObject door;
     GameObject key;
     GameMaster GM;
-    GameObject restartMenu;
 
     // Start is called before the first frame update
     void Start()
     {
         key = GameObject.FindGameObjectWithTag("Key");
         door = GameObject.FindGameObjectWithTag("Door");
-        restartMenu = GameObject.FindGameObjectWithTag("Restart");
         //GM = GameObject.FindGameObjectWithTag("GM");
         GM = GameMaster.Instance;
     }
@@ -65,7 +63,6 @@ public class BunnyController : MonoBehaviour
         Instantiate(bunnyDeath, transform.position, transform.rotation);
         if (birdo != null) 
         {
-            restartMenu.SetActive(true);
             StartCoroutine(RespawnBunny());
         }
         else
