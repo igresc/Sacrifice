@@ -8,7 +8,9 @@ public class Projectile : MonoBehaviour
 	[HideInInspector] public CircleCollider2D circleCollider;
 	[HideInInspector] public bool isRespawn = false;
 	public GameObject birdDeath;
-	
+	bool isFacingRight;
+
+
 	void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -24,6 +26,7 @@ public class Projectile : MonoBehaviour
 	public void Throw(Vector2 force)
 	{
 		rb.AddForce(force, ForceMode2D.Impulse);
+		Flip();
 	}
 
 	public void ActivateRb()
@@ -60,5 +63,16 @@ public class Projectile : MonoBehaviour
 		SacrificialCounter.birdosSacrified++;
 		Instantiate(birdDeath, transform.position, transform.rotation);
 		Destroy(this.gameObject);
+	}
+
+	void Flip()
+	{
+		if (isFacingRight && rb.velocity.x <= 0f || !isFacingRight && rb.velocity.x >= 0f)
+		{
+			isFacingRight = !isFacingRight;
+			Vector3 localScale = transform.localScale;
+			localScale.x *= -1;
+			transform.localScale = localScale;
+		}
 	}
 }
