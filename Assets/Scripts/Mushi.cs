@@ -9,6 +9,7 @@ public class Mushi : MonoBehaviour
     public float jumpForce;
     [SerializeField] private ParticleSystem deadParticles;
     [SerializeField] private Animator anim;
+    [SerializeField] private AudioSource jumpi;
     bool isTouched = false;
     float timeBeforeDie = 3;
     public GameObject MushiDeath;
@@ -36,6 +37,7 @@ public class Mushi : MonoBehaviour
             rb = bunny.GetComponent<Rigidbody2D>(); 
             rb.velocity = new Vector2(-1, jumpForce);
             isTouched = true;
+            jumpi.Play();
         }
 
     }
