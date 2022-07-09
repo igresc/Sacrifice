@@ -1106,6 +1106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6f69a8833e2c6499a870307bf93c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartMenuUi: {fileID: 0}
   Pause: {fileID: 5978531776144158063}
 --- !u!114 &1049238969656433926
 MonoBehaviour:
