@@ -1955,6 +1955,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 459244304225002035, guid: f175febcd62931a4eb248475ae50cf3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2275760320739653320, guid: f175febcd62931a4eb248475ae50cf3a, type: 3}
       propertyPath: restartMenuUi
       value: 
