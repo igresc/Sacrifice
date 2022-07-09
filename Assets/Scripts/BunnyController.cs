@@ -10,14 +10,15 @@ public class BunnyController : MonoBehaviour
     private Projectile birdo;
     GameObject door;
     GameObject key;
-    GameObject GM;
+    GameMaster GM;
 
     // Start is called before the first frame update
     void Start()
     {
         key = GameObject.FindGameObjectWithTag("Key");
         door = GameObject.FindGameObjectWithTag("Door");
-        GM = GameObject.FindGameObjectWithTag("GM");
+        //GM = GameObject.FindGameObjectWithTag("GM");
+        GM = GameMaster.Instance;
     }
 
     void Update()
@@ -31,7 +32,7 @@ public class BunnyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        //Debug.Log(collision.name);
         if (collision.CompareTag("Enemies")) 
         {
             Die();
@@ -50,7 +51,8 @@ public class BunnyController : MonoBehaviour
 
     IEnumerator RespawnBunny()
     {
-        Instantiate(Bunny, birdo.transform.position, Quaternion.identity);
+        Vector3 newPos = new Vector3(birdo.transform.position.x, birdo.transform.position.y + .5f); 
+        Instantiate(Bunny, newPos, Quaternion.identity);
         birdo.Die();
 		Destroy(this.gameObject);
         yield return null;
@@ -59,6 +61,11 @@ public class BunnyController : MonoBehaviour
     void Die()
 	{
         Instantiate(bunnyDeath, transform.position, transform.rotation);
-        StartCoroutine(RespawnBunny());
+        if(birdo != null)
+            StartCoroutine(RespawnBunny());
+        else
+		{
+            GM.Restart();
+		}
 	}
 }

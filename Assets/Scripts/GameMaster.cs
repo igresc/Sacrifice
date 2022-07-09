@@ -5,18 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static GameMaster Instance;
+
     public float numOfBirdos;
     public bool hasBirdos = true;
 
     public bool hasKey = false;
 
-    void Start()
+	private void Awake()
+	{
+		Instance = this; 
+	}
+
+	void Start()
     {
         hasBirdos = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (numOfBirdos == 0) 
@@ -25,7 +30,11 @@ public class GameMaster : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R)) 
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Restart();
         }
     }
+	public void Restart()
+	{
+	    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
 }
