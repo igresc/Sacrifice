@@ -8,6 +8,7 @@ TagManager:
   - Key
   - Door
   - GM
+  - Restart
   layers:
   - Default
   - TransparentFX

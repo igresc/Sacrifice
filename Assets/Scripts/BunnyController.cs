@@ -11,6 +11,7 @@ public class BunnyController : MonoBehaviour
     GameObject door;
     GameObject key;
     GameMaster GM;
+    [SerializeField] private AudioSource keySound;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class BunnyController : MonoBehaviour
             key.GetComponent<KeyLogic>().hasKey = true;
             GM.GetComponent<GameMaster>().hasKey = true;
             door.GetComponent<Animator>().SetBool("isOpen", true);
+            keySound.Play();
         }
         if(collision.CompareTag("Door") && GM.GetComponent<GameMaster>().hasKey)
         {
@@ -60,8 +62,10 @@ public class BunnyController : MonoBehaviour
     void Die()
 	{
         Instantiate(bunnyDeath, transform.position, transform.rotation);
-        if(birdo != null)
+        if (birdo != null) 
+        {
             StartCoroutine(RespawnBunny());
+        }
         else
 		{
             GM.Restart();
