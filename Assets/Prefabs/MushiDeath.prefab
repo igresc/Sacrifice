@@ -1421,5 +1421,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionStrenght: 18
-  explosionTorque: 50
+  explosionTorque: 100
   deadParticles: {fileID: 1122432097065049652, guid: 875667eca74adb94ea809f38840ecfd3, type: 3}
