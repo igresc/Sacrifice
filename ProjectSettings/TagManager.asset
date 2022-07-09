@@ -9,6 +9,7 @@ TagManager:
   - Door
   - GM
   - Restart
+  - DeadThing
   layers:
   - Default
   - TransparentFX

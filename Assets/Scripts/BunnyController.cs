@@ -13,12 +13,13 @@ public class BunnyController : MonoBehaviour
     GameMaster GM;
     [SerializeField] private AudioSource keySound;
 
-    // Start is called before the first frame update
     void Start()
     {
         key = GameObject.FindGameObjectWithTag("Key");
         door = GameObject.FindGameObjectWithTag("Door");
         GM = GameMaster.Instance;
+
+		Physics2D.IgnoreLayerCollision(8,9);
     }
 
     void Update()

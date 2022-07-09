@@ -17,8 +17,7 @@ GameObject:
   - component: {fileID: 6497913956414800021}
   - component: {fileID: 6323029278340161298}
   - component: {fileID: 5228628588824144781}
-  - component: {fileID: 4156940556873714031}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -319,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bunny: {fileID: 4481383973565705832}
   bunnyDeath: {fileID: 7850848805157641922, guid: 7be399d7f3065d74ab2608eced75e8b0, type: 3}
+  keySound: {fileID: 0}
 --- !u!1 &6054561163323400220
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3738800974343220912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grondCheck
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
