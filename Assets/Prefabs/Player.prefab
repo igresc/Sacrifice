@@ -280,6 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308c732d0f83eb1429a1cd963ad879c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  jumpingPower: 10
   fallMultiplier: 6
   lowJumpMultiplier: 5.5
   rb: {fileID: 3363015082071442098}
@@ -316,7 +318,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bunny: {fileID: 4481383973565705832}
   bunnyDeath: {fileID: 7850848805157641922, guid: 7be399d7f3065d74ab2608eced75e8b0, type: 3}
-  birdo: {fileID: 0}
 --- !u!1 &6054561163323400220
 GameObject:
   m_ObjectHideFlags: 0

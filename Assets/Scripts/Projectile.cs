@@ -15,6 +15,12 @@ public class Projectile : MonoBehaviour
 		circleCollider = GetComponent<CircleCollider2D>();
 	}
 
+	private void Start()
+	{
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+	}
+
 	public void Throw(Vector2 force)
 	{
 		rb.AddForce(force, ForceMode2D.Impulse);
@@ -37,6 +43,7 @@ public class Projectile : MonoBehaviour
 		{
 			DesactivateRb();
 			isRespawn = true;
+		} else {
 		}
 	}
 	private void OnTriggerEnter2D(Collider2D collision)

@@ -17,7 +17,6 @@ public class BunnyController : MonoBehaviour
     {
         key = GameObject.FindGameObjectWithTag("Key");
         door = GameObject.FindGameObjectWithTag("Door");
-        //GM = GameObject.FindGameObjectWithTag("GM");
         GM = GameMaster.Instance;
     }
 
