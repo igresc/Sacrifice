@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6497913956414800021}
   - component: {fileID: 6323029278340161298}
   - component: {fileID: 5228628588824144781}
+  - component: {fileID: 990090700641848463}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -211,22 +212,22 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0046081543
-        value: 1
-        inSlope: 0.0000035129951
-        outSlope: 0.0000035129951
+        time: 0
+        value: 0.18253899
+        inSlope: -0.19790174
+        outSlope: -0.19790174
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.18663593
+        outWeight: 0.16040955
       - serializedVersion: 3
         time: 1
         value: 0
-        inSlope: -0.068921775
-        outSlope: -0.068921775
+        inSlope: -0.16609979
+        outSlope: -0.16609979
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.07373279
+        inWeight: 0.1433447
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -263,7 +264,7 @@ LineRenderer:
     numCornerVertices: 5
     numCapVertices: 5
     alignment: 0
-    textureMode: 0
+    textureMode: 2
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
