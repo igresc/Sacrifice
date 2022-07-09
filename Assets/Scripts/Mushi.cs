@@ -11,6 +11,7 @@ public class Mushi : MonoBehaviour
     [SerializeField] private Animator anim;
     bool isTouched = false;
     float timeBeforeDie = 3;
+    public GameObject MushiDeath;
 
     private void Update()
     {
@@ -40,7 +41,7 @@ public class Mushi : MonoBehaviour
     }
     void Death() 
     {
-        Instantiate(deadParticles, transform.position, Quaternion.identity);
+        Instantiate( MushiDeath, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }
