@@ -12,10 +12,10 @@ public class RestartMenu : MonoBehaviour
 		//	Time.timeScale = 0f;
 		//	restartMenuUi.SetActive(true);
 		//}
-		if (restartMenuUi.activeSelf == true)
-		{
-			Pause.SetActive(false);
-		}
+		//if (restartMenuUi.activeSelf == true)
+		//{
+		//	Pause.SetActive(false);
+		//}
 
 	}
 	public void RestartGame()
