@@ -40,7 +40,7 @@ public class BunnyShoot : MonoBehaviour
 
 			if (Input.GetButtonUp("Fire1") && isAiming)
 			{
-				projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x, transform.position.y + 1), transform.rotation);
+				projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x, transform.position.y), transform.rotation);
 				projectile.Throw(dir);
 				isAiming = false;
 				lineRenderer.enabled = false;
