@@ -10,11 +10,14 @@ public class BunnyController : MonoBehaviour
     private Projectile birdo;
     GameObject door;
     GameObject key;
+    GameObject GM;
+
     // Start is called before the first frame update
     void Start()
     {
         key = GameObject.FindGameObjectWithTag("Key");
         door = GameObject.FindGameObjectWithTag("Door");
+        GM = GameObject.FindGameObjectWithTag("GM");
     }
 
     void Update()
@@ -28,6 +31,7 @@ public class BunnyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.name);
         if (collision.CompareTag("Enemies")) 
         {
             Die();
@@ -35,9 +39,10 @@ public class BunnyController : MonoBehaviour
         if (collision.CompareTag("Key")) 
         {
             key.GetComponent<KeyLogic>().hasKey = true;
+            GM.GetComponent<GameMaster>().hasKey = true;
             door.GetComponent<Animator>().SetBool("isOpen", true);
         }
-        if (collision.CompareTag("Door") && key.GetComponent<KeyLogic>().hasKey)
+        if(collision.CompareTag("Door") && GM.GetComponent<GameMaster>().hasKey)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

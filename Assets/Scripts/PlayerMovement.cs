@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	float horizontal;
-	float speed = 8f;
-	float jumpingPower = 10f;
+	[SerializeField] float speed = 8f;
+	[SerializeField] float jumpingPower = 10f;
 	bool isFacingRight = false;
 
 	[SerializeField] public float fallMultiplier = 6f;

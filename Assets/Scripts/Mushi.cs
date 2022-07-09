@@ -12,12 +12,6 @@ public class Mushi : MonoBehaviour
     bool isTouched = false;
     float timeBeforeDie = 3;
 
-    void Start()
-    {
-        bunny = GameObject.FindGameObjectWithTag("Player");
-        rb = bunny.GetComponent<Rigidbody2D>(); 
-    }
-
     private void Update()
     {
         if (isTouched) 
@@ -35,8 +29,10 @@ public class Mushi : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
+            bunny = GameObject.FindGameObjectWithTag("Player");
+            rb = bunny.GetComponent<Rigidbody2D>(); 
             rb.velocity = new Vector2(-1, jumpForce);
             isTouched = true;
         }

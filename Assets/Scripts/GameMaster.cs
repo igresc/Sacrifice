@@ -8,6 +8,9 @@ public class GameMaster : MonoBehaviour
     // Start is called before the first frame update
     public float numOfBirdos;
     public bool hasBirdos = true;
+
+    public bool hasKey = false;
+
     void Start()
     {
         hasBirdos = true;
