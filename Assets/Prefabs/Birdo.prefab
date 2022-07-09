@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2568816600575014976}
   - component: {fileID: 437356066624961267}
   - component: {fileID: 6093593333306275794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Birdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

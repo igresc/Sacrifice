@@ -23,6 +23,7 @@ public class DeathBOOM : MonoBehaviour
 			if(part != null)
 			{
 				Vector2 dir = part.transform.position - transform.position;
+				if(dir.y < 0) dir.y *= -1;
 				float distance = 1 + dir.magnitude;
 				float finalForce = explosionStrenght / distance;
 				part.AddTorque(-dir.x * explosionTorque, ForceMode2D.Force);
