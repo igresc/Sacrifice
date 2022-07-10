@@ -55,6 +55,7 @@ public class Projectile : MonoBehaviour
 		if(collision.CompareTag("Enemies"))
 		{
 			Die();
+			bSplash.SplashBlood(transform, collision);
 		}
 	}
 

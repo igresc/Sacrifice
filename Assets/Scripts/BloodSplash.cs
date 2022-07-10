@@ -11,7 +11,7 @@ public class BloodSplash : MonoBehaviour
 
 		Vector2 newPos = transform.position;
 		Vector2 relativePoint = GetRelativePosition(transform, collision.bounds.center);
-		Debug.Log(relativePoint);
+		//Debug.Log(relativePoint);
 		if(Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
 		{
 			if(relativePoint.x < 0)
