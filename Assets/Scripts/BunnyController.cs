@@ -64,13 +64,14 @@ public class BunnyController : MonoBehaviour
 	{
         SacrificialCounter.bunniesSacrified++;
         Instantiate(bunnyDeath, transform.position, transform.rotation);
-        if (birdo != null) 
-        {
+        if (birdo == null)
+		{
+            Destroy(gameObject);
+			GM.Invoke("Restart", 2.0f);
+		}
+		else {
+            Debug.Log(birdo);
             StartCoroutine(RespawnBunny());
         }
-        else
-		{
-            GM.Restart();
-		}
 	}
 }
