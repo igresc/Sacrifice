@@ -12,6 +12,7 @@ public class BunnyController : MonoBehaviour
     GameObject key;
     GameMaster GM;
     [SerializeField] private AudioSource keySound;
+    //public GameObject popUp;
 
     void Start()
     {
@@ -64,6 +65,8 @@ public class BunnyController : MonoBehaviour
 	{
         SacrificialCounter.bunniesSacrified++;
         Instantiate(bunnyDeath, transform.position, transform.rotation);
+        //popUp.transform.position = new Vector2(transform.position.x, transform.position.y);
+        //Instantiate(popUp, popUp.transform.position, transform.rotation);
         if (birdo == null)
 		{
             Destroy(gameObject);

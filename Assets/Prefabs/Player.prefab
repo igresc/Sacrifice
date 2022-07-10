@@ -320,6 +320,7 @@ MonoBehaviour:
   Bunny: {fileID: 4481383973565705832}
   bunnyDeath: {fileID: 7850848805157641922, guid: 7be399d7f3065d74ab2608eced75e8b0, type: 3}
   keySound: {fileID: 990090700641848463}
+  popUp: {fileID: 7110410599921676678, guid: 8d1172ccfbf58fb4eb4aca5179b533be, type: 3}
 --- !u!82 &990090700641848463
 AudioSource:
   m_ObjectHideFlags: 0
