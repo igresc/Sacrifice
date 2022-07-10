@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
 	public GameObject birdDeath;
 	bool isFacingRight;
 
-	[SerializeField] private GameObject bloodSplash;
+	[SerializeField] private BloodSplash bSplash;
 
 	void Awake()
 	{
@@ -55,19 +55,6 @@ public class Projectile : MonoBehaviour
 		if(collision.CompareTag("Enemies"))
 		{
 			Die();
-			Vector2 newPos = transform.position;
-			//Vector2 relativePoint = transform.InverseTransformPoint(collision.transform.position);
-			Vector2 relativePoint = getRelativePosition(collision.transform, transform.position);
-			Debug.Log(relativePoint);
-			if (relativePoint.x > 0)
-			{
-				Debug.Log("Right");
-			}
-			else
-			{
-				Debug.Log("Left");
-			}
-			Instantiate(bloodSplash, newPos, transform.rotation);
 		}
 	}
 
@@ -89,14 +76,4 @@ public class Projectile : MonoBehaviour
 		}
 	}
 
-	public static Vector3 getRelativePosition(Transform origin, Vector3 position)
-	{
-		Vector3 distance = position - origin.position;
-		Vector3 relativePosition = Vector3.zero;
-		relativePosition.x = Vector3.Dot(distance, origin.right.normalized);
-		relativePosition.y = Vector3.Dot(distance, origin.up.normalized);
-		relativePosition.z = Vector3.Dot(distance, origin.forward.normalized);
-
-		return relativePosition;
-	}
 }

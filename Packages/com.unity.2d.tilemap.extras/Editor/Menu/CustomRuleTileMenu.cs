@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace UnityEditor
 {
-    static class CustomRuleTileMenu
-    {
-        private static string tempCustomRuleTilePath;
-        private const string customRuleTileScript =
+	static class CustomRuleTileMenu
+	{
+		private static string tempCustomRuleTilePath;
+		private const string customRuleTileScript =
 @"using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,13 +32,13 @@ public class #SCRIPTNAME# : RuleTile<#SCRIPTNAME#.Neighbor> {
     }
 }";
 
-        [MenuItem("Assets/Create/2D/Tiles/Custom Rule Tile Script", false, (int)ETilesMenuItemOrder.CustomRuleTile)]
-        static void CreateCustomRuleTile()
-        {
-            if (String.IsNullOrEmpty(tempCustomRuleTilePath) || !File.Exists(tempCustomRuleTilePath))
-                tempCustomRuleTilePath = FileUtil.GetUniqueTempPathInProject();
-            File.WriteAllText(tempCustomRuleTilePath, customRuleTileScript);
-            ProjectWindowUtil.CreateScriptAssetFromTemplateFile(tempCustomRuleTilePath, "NewCustomRuleTile.cs");
-        }
-    }
+		[MenuItem("Assets/Create/2D/Tiles/Custom Rule Tile Script", false, (int) ETilesMenuItemOrder.CustomRuleTile)]
+		static void CreateCustomRuleTile()
+		{
+			if(String.IsNullOrEmpty(tempCustomRuleTilePath) || !File.Exists(tempCustomRuleTilePath))
+				tempCustomRuleTilePath = FileUtil.GetUniqueTempPathInProject();
+			File.WriteAllText(tempCustomRuleTilePath, customRuleTileScript);
+			ProjectWindowUtil.CreateScriptAssetFromTemplateFile(tempCustomRuleTilePath, "NewCustomRuleTile.cs");
+		}
+	}
 }

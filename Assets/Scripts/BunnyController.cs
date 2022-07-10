@@ -12,8 +12,7 @@ public class BunnyController : MonoBehaviour
 	GameObject key;
 	GameMaster GM;
 	[SerializeField] private AudioSource keySound;
-	[SerializeField] private GameObject bloodSplash;
-
+	[SerializeField] private BloodSplash bSplash;
 
 	void Start()
 	{
@@ -39,9 +38,7 @@ public class BunnyController : MonoBehaviour
 		if(collision.CompareTag("Enemies"))
 		{
 			Die();
-
-			var newPos = new Vector3(transform.position.x, transform.position.y);
-			Instantiate(bloodSplash, newPos, transform.rotation);
+			bSplash.SplashBlood(transform, collision);
 		}
 		if(collision.CompareTag("Key"))
 		{
