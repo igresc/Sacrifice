@@ -310,6 +310,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5701103867480280336, guid: f6d5cf4e70a14fc44a79c1dbbaf33f06, type: 3}
+      propertyPath: numOfBirdos
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5701103867480280337, guid: f6d5cf4e70a14fc44a79c1dbbaf33f06, type: 3}
       propertyPath: m_RootOrder
       value: 9
