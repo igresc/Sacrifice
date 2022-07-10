@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class BunnyController : MonoBehaviour
 {
-	public GameObject Bunny;
-	public GameObject bunnyDeath;
-	private Projectile birdo;
-	GameObject door;
-	GameObject key;
-	GameMaster GM;
-	[SerializeField] private AudioSource keySound;
+    public GameObject Bunny;
+    public GameObject bunnyDeath;
+    private Projectile birdo;
+    GameObject door;
+    GameObject key;
+    GameMaster GM;
+    [SerializeField] private AudioSource keySound;
 
 	void Start()
 	{
@@ -22,14 +22,14 @@ public class BunnyController : MonoBehaviour
 		Physics2D.IgnoreLayerCollision(8, 9);
 	}
 
-	void Update()
-	{
-		if(Input.GetButtonDown("Fire3"))
-		{
-			Die();
-		}
-		birdo = GetComponent<BunnyShoot>().projectile;
-	}
+    void Update()
+    {
+		//if(Input.GetButtonDown("Fire3"))
+		//{
+  //          Die();
+		//}
+        birdo = GetComponent<BunnyShoot>().projectile;
+    }
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
