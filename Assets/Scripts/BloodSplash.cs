@@ -10,7 +10,7 @@ public class BloodSplash : MonoBehaviour
 	{
 
 		Vector2 newPos = transform.position;
-		Vector2 relativePoint = GetRelativePosition(transform, collision.bounds.center);
+		Vector2 relativePoint = getRelativePosition(transform, collision.bounds.center);
 		//Debug.Log(relativePoint);
 		if(Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
 		{
@@ -41,7 +41,7 @@ public class BloodSplash : MonoBehaviour
 		Instantiate(bloodSplash, newPos, transform.rotation);
 	}
 
-	public static Vector3 GetRelativePosition(Transform origin, Vector3 position)
+	public static Vector3 getRelativePosition(Transform origin, Vector3 position)
 	{
 		Vector3 distance = position - origin.position;
 		Vector3 relativePosition = Vector3.zero;
