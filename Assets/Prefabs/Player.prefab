@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6323029278340161298}
   - component: {fileID: 5228628588824144781}
   - component: {fileID: 990090700641848463}
+  - component: {fileID: 6925240385999399049}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -320,7 +321,7 @@ MonoBehaviour:
   Bunny: {fileID: 4481383973565705832}
   bunnyDeath: {fileID: 7850848805157641922, guid: 7be399d7f3065d74ab2608eced75e8b0, type: 3}
   keySound: {fileID: 990090700641848463}
-  bloodSplash: {fileID: 3658812811451106399, guid: fe4e63d290888d448a62bbbb735f7f08, type: 3}
+  bSplash: {fileID: 6925240385999399049}
 --- !u!82 &990090700641848463
 AudioSource:
   m_ObjectHideFlags: 0
@@ -417,6 +418,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6925240385999399049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481383973565705832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de54df5ed4c86243a9bb2dd9b537916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodSplash: {fileID: 3658812811451106399, guid: e8753ac3e1c77274bb360d2684b49e7b, type: 3}
 --- !u!1 &6054561163323400220
 GameObject:
   m_ObjectHideFlags: 0
