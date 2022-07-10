@@ -25,10 +25,10 @@ public class BunnyController : MonoBehaviour
 
     void Update()
     {
-		if(Input.GetButtonDown("Fire3"))
-		{
-            Die();
-		}
+		//if(Input.GetButtonDown("Fire3"))
+		//{
+  //          Die();
+		//}
         birdo = GetComponent<BunnyShoot>().projectile;
     }
 
