@@ -15,9 +15,9 @@ public class SacrificialCounter : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(bunniesSacrified);
-        Debug.Log(birdosSacrified);
-        Debug.Log(mushisSacrified);
+        //Debug.Log(bunniesSacrified);
+        //Debug.Log(birdosSacrified);
+        //Debug.Log(mushisSacrified);
         if (SceneManager.GetActiveScene().buildIndex == 0) 
         {
             bunniesSacrified = 0;
