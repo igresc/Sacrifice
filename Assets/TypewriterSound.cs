@@ -22,13 +22,13 @@ public class TypewriterSound : MonoBehaviour
 
 	public void Play(bool isSpace)
 	{
-		if (isSpace)
+		if(isSpace)
 		{
 			sounds[sounds.Length - 1].source.Play();
 		}
 		else
 		{
-			int randN = Random.Range(0,sounds.Length - 2);	
+			int randN = Random.Range(0,sounds.Length - 2);
 			sounds[randN].source.Play();
 		}
 	}

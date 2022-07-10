@@ -162,6 +162,7 @@ MonoBehaviour:
   circleCollider: {fileID: 0}
   isRespawn: 0
   birdDeath: {fileID: 9127633003266391648, guid: b1cf80503dbfc664793b6bcf62f0795b, type: 3}
+  bloodSplash: {fileID: 3658812811451106399, guid: fe4e63d290888d448a62bbbb735f7f08, type: 3}
 --- !u!82 &6093593333306275794
 AudioSource:
   m_ObjectHideFlags: 0
