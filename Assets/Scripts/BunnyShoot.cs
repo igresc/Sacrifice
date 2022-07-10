@@ -21,15 +21,15 @@ public class BunnyShoot : MonoBehaviour
 	{
 		Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		worldPosition.z = 0;
-		if (GM.GetComponent<GameMaster>().hasBirdos)
+		if(GM.GetComponent<GameMaster>().hasBirdos)
 		{
-			if (Input.GetButtonDown("Fire1") && !projectile)
+			if(Input.GetButtonDown("Fire1") && !projectile)
 			{
 				lineRenderer.enabled = true;
 				isAiming = true;
 			}
 
-			if (isAiming)
+			if(isAiming)
 			{
 				dir = worldPosition - gameObject.transform.position;
 				dir = dir * 1.5f;
@@ -38,7 +38,7 @@ public class BunnyShoot : MonoBehaviour
 				lineRenderer.SetPosition(0, transform.position);
 			}
 
-			if (Input.GetButtonUp("Fire1") && isAiming)
+			if(Input.GetButtonUp("Fire1") && isAiming)
 			{
 				projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x, transform.position.y), transform.rotation);
 				projectile.Throw(dir);

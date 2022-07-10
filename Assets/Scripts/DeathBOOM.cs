@@ -5,9 +5,9 @@ using UnityEngine;
 public class DeathBOOM : MonoBehaviour
 {
 
-    [SerializeField] private float explosionStrenght;
-    [SerializeField] private float explosionTorque;
-    [SerializeField] private ParticleSystem deadParticles;
+	[SerializeField] private float explosionStrenght;
+	[SerializeField] private float explosionTorque;
+	[SerializeField] private ParticleSystem deadParticles;
 
 	public void Start()
 	{
@@ -18,7 +18,7 @@ public class DeathBOOM : MonoBehaviour
 	public void Death()
 	{
 		Rigidbody2D[] parts = GetComponentsInChildren<Rigidbody2D>();
-		foreach (Rigidbody2D part in parts)
+		foreach(Rigidbody2D part in parts)
 		{
 			if(part != null)
 			{

@@ -430,7 +430,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 419a3b6018172834b9915b923b0a8655, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3393a380d817e8b4886dd2011b5fb409, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -440,7 +440,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 0.1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -711,8 +711,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 46}
-  m_SizeDelta: {x: 600, y: 100}
+  m_AnchoredPosition: {x: 0.935, y: 19.3}
+  m_SizeDelta: {x: 626.33, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &277931220
 MonoBehaviour:
@@ -741,7 +741,10 @@ MonoBehaviour:
 
 
     PRESS RMB TO KILL
-    MR.BIRDO'
+    MR.BIRDO
+
+
+    PRESS R TO RESTART THE LEVEL'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa57aef8c2823e34d9bb42e05f06e17c, type: 2}
   m_sharedMaterial: {fileID: -7718666592260297899, guid: aa57aef8c2823e34d9bb42e05f06e17c, type: 2}
@@ -2559,7 +2562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 146}
+  m_AnchoredPosition: {x: 0, y: 163.8}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429405633

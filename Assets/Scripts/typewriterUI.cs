@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class typewriterUI : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class typewriterUI : MonoBehaviour
 		_text = GetComponent<Text>()!;
 		_tmpProText = GetComponent<TMP_Text>()!;
 
-		if (_text != null)
+		if(_text != null)
 		{
 			writer = _text.text;
 			_text.text = "";
@@ -29,7 +30,7 @@ public class typewriterUI : MonoBehaviour
 			StartCoroutine("TypeWriterText");
 		}
 
-		if (_tmpProText != null)
+		if(_tmpProText != null)
 		{
 			writer = _tmpProText.text;
 			_tmpProText.text = "";
@@ -44,9 +45,9 @@ public class typewriterUI : MonoBehaviour
 
 		yield return new WaitForSeconds(delayBeforeStart);
 
-		foreach (char c in writer)
+		foreach(char c in writer)
 		{
-			if (_text.text.Length > 0)
+			if(_text.text.Length > 0)
 			{
 				_text.text = _text.text.Substring(0, _text.text.Length - leadingChar.Length);
 			}
@@ -55,7 +56,7 @@ public class typewriterUI : MonoBehaviour
 			yield return new WaitForSeconds(timeBtwChars);
 		}
 
-		if (leadingChar != "")
+		if(leadingChar != "")
 		{
 			_text.text = _text.text.Substring(0, _text.text.Length - leadingChar.Length);
 		}
@@ -67,18 +68,26 @@ public class typewriterUI : MonoBehaviour
 
 		yield return new WaitForSeconds(delayBeforeStart);
 
-		foreach (char c in writer)
+		foreach(char c in writer)
 		{
-			if (_tmpProText.text.Length > 0)
+			if(_tmpProText.text.Length > 0)
 			{
 				_tmpProText.text = _tmpProText.text.Substring(0, _tmpProText.text.Length - leadingChar.Length);
+			}
+			if(c == ' ')
+			{
+				GetComponent<TypewriterSound>().Play(true);
+			}
+			else
+			{
+				GetComponent<TypewriterSound>().Play(false);
 			}
 			_tmpProText.text += c;
 			_tmpProText.text += leadingChar;
 			yield return new WaitForSeconds(timeBtwChars);
 		}
 
-		if (leadingChar != "")
+		if(leadingChar != "")
 		{
 			_tmpProText.text = _tmpProText.text.Substring(0, _tmpProText.text.Length - leadingChar.Length);
 		}

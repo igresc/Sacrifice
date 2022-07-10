@@ -46,14 +46,16 @@ public class Projectile : MonoBehaviour
 		{
 			DesactivateRb();
 			isRespawn = true;
-		} else {
+		}
+		else
+		{
 		}
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag("Enemies"))
+		if(collision.CompareTag("Enemies"))
 		{
-			
+
 			Die();
 		}
 	}
@@ -67,7 +69,7 @@ public class Projectile : MonoBehaviour
 
 	void Flip()
 	{
-		if (isFacingRight && rb.velocity.x <= 0f || !isFacingRight && rb.velocity.x >= 0f)
+		if(isFacingRight && rb.velocity.x <= 0f || !isFacingRight && rb.velocity.x >= 0f)
 		{
 			isFacingRight = !isFacingRight;
 			Vector3 localScale = transform.localScale;

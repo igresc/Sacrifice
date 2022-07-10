@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class KeyLogic : MonoBehaviour
 {
-    public bool hasKey = false;
-    void Update()
-    {
-        if (hasKey) 
-        {
-            Destroy(this.gameObject);
-        }
-    }
+	public bool hasKey = false;
+	void Update()
+	{
+		if(hasKey)
+		{
+			Destroy(this.gameObject);
+		}
+	}
 }

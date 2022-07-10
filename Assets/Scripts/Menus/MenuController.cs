@@ -9,7 +9,7 @@ public class MenuController : MonoBehaviour
 	[SerializeField] GameObject StartScreen;
 	private void Update()
 	{
-		if (PauseMenu.activeSelf || RestartMenu.activeSelf || StartScreen.activeSelf)
+		if(PauseMenu.activeSelf || RestartMenu.activeSelf || StartScreen.activeSelf)
 		{
 			Time.timeScale = 0f;
 		}

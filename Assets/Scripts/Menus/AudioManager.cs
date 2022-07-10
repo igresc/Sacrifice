@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -18,6 +16,7 @@ public class AudioManager : MonoBehaviour
 		masterVolume = 1f;
 		slider.value = masterVolume;
 	}
+
 	void Update()
 	{
 		AudioListener.volume = slider.value;
